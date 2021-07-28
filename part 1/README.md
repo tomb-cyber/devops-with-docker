@@ -21,7 +21,7 @@
 
 ### Exercise  7 ###
 ![](https://github.com/tomb-cyber/devops-with-docker/blob/master/part%201/1.7.PNG)
-
+[Dockerfile](./Dockerfile7)
 
 ### Exercise  8 ###
 ![](https://github.com/tomb-cyber/devops-with-docker/blob/master/part%201/1.8.1.PNG)
