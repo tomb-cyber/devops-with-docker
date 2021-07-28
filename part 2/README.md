@@ -11,7 +11,7 @@
 [docker-compose](./docker-compose2.4.yml)
 
 ### Exercise  5 ###
-[docker-compose](./docker-compose2..yml)
+![](./2.5.PNG)
 
 ### Exercise  6 ###
 [docker-compose](./docker-compose2.6.yml)
