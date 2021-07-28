@@ -52,6 +52,7 @@
 ![](https://github.com/tomb-cyber/devops-with-docker/blob/master/part%201/1.14.2.PNG)
 
 [Dockerfile for frontend](./Dockerfile14-front)
+
 [Dockerfile for backend](./Dockerfile14-back)
 
 ### Exercise  15 ###
