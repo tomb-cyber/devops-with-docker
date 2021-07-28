@@ -2,6 +2,8 @@
 ![commands 1](https://github.com/tomb-cyber/devops-with-docker/blob/master/part%201/1.1.PNG)
 
 ### Exercise  2 ###
+![](https://github.com/tomb-cyber/devops-with-docker/blob/master/part%201/1.2.PNG)
+
 ### Exercise  3 ###
 ### Exercise  4 ###
 ### Exercise  5 ###
