@@ -1,0 +1,11 @@
+FROM ubuntu:18.04
+
+RUN apt update
+
+RUN apt install -y curl
+
+WORKDIR /usr
+
+COPY . /usr
+
+CMD ./script8.sh

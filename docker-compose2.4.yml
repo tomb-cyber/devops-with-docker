@@ -1,0 +1,22 @@
+version: '3.5' 
+
+services: 
+    front:  
+      image: frontend
+      build: .
+      container_name: frontend
+      ports: 
+        - 8080:5000
+    back:
+      image: backend
+      build: 
+          context: ../example-backend/
+      container_name: backend
+      ports: 
+        - 5000:8080
+      environment:
+        - REDIS_HOST=redis
+    redis:
+      image: redis
+      container_name: redis
+      command: redis-server --appendonly yes 

@@ -1,0 +1,59 @@
+version: '3.5' 
+
+services: 
+    front:  
+      image: frontend
+      ports: 
+        - 5000:5000
+
+    back:
+      image: backend
+      ports: 
+        - 8080:8080
+      environment:
+        - REDIS_HOST=redis
+        - POSTGRES_HOST=db
+        - POSTGRES_PASSWORD=postgres
+        - POSTGRES_USER=postgres
+        - POSTGRES_DATABASE=postgres
+        
+    db:
+      image: postgres:13.2-alpine
+      restart: unless-stopped
+      environment:
+        - POSTGRES_PASSWORD=postgres
+        - POSTGRES_DATABASE=postgres
+        - POSTGRES_USER=postgres
+
+    redmine:
+      image: redmine:4.1-alpine
+      environment:
+        - REDMINE_DB_POSTGRES=db
+        - REDMINE_DB_PASSWORD=postgres
+      depends_on:
+        - db
+      ports:
+        - 9999:3000
+
+    adminer:
+      image: adminer:4
+      restart: always
+      environment:
+          - ADMINER_DESIGN=galkaev
+      ports:
+          - 8083:8080
+
+    redis:
+      image: redis
+      container_name: redis
+      command: redis-server --appendonly yes
+
+    proxy:
+      image: nginx:1.19-alpine
+      volumes:
+        - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      ports: 
+        - 80:80 
+      depends_on:
+        - front
+        - back
