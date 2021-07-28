@@ -38,6 +38,7 @@
 
 ### Exercise  11 ###
 ![](https://github.com/tomb-cyber/devops-with-docker/blob/master/part%201/1.11.PNG)
+![](https://github.com/tomb-cyber/devops-with-docker/blob/master/part%201/1.11browser.PNG)
 
 ### Exercise  12 ###
 [Dockerfile](./Dockerfile12)
